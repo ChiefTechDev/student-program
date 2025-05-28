@@ -6,7 +6,6 @@ export function middleware(request: NextRequest) {
   console.log('Middleware checking session:', !!request.cookies.get('session'));
   console.log('Current path:', request.nextUrl.pathname);
 
-  // Get the session cookie
   const session = request.cookies.get('session');
   const isAuthenticated = !!session;
 
